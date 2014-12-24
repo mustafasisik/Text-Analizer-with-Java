@@ -19,10 +19,9 @@ public class TextAnalizer {
     }
     public static int getTokenCount(Scanner reader){
         int count = 0;
-        String token;
         while(reader.hasNext()){
             count++;
-            token = reader.next();
+           reader.next();
         }
         return count;
     }
