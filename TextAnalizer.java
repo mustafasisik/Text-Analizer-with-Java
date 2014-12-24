@@ -7,9 +7,9 @@ public class TextAnalizer {
 
     public static void main(String[] args) throws FileNotFoundException {
         // TODO Auto-generated method stub
-        Scanner reader = new Scanner(new File("data.txt"));
+        Scanner reader = new Scanner(new File("deneme1.txt"));
         int count = getTokenCount(reader);
-        reader = new Scanner(new File("data.txt"));
+        reader = new Scanner(new File("deneme1.txt"));
         String[] text = makeTokenArray(reader, count);
         fiftyPercent(text, count);
         someWordsSpan(text, count);
@@ -45,11 +45,11 @@ public class TextAnalizer {
             }
             if(wordCount>count/2){
                 System.out.println("This text is span");
-                System.out.println(text[i] + " appears more than 50% of the time”.");
+                System.out.println("\""+ text[i] + "\" appears more than 50% of the time\n");
                 return;
             }
         }
-        System.out.println("Text is not span for 50% word");
+        System.out.println("Text is not span for 50% word\n");
     }
 
     public static void someWordsSpan(String[] text, int count){
@@ -63,11 +63,11 @@ public class TextAnalizer {
             }
             if(wordCount > 1){
                 System.out.println("This text is span");
-                System.out.println("Because the word "+s+" is more than 1");
+                System.out.println("Because the word "+s+" is more than 1\n");
                 return;
             }
         }
-        System.out.println("There is no span for someWord");
+        System.out.println("Text is not span for determined word repeating one more\n");
     }
 
     public static void percent30(String[] text, int count){
@@ -93,11 +93,12 @@ public class TextAnalizer {
             }
             if(wordExcessing30Percent>=3){
                 System.out.println("Text is span");
-                System.out.println("Because of words: "+ mostUsedWords[0] + " " + mostUsedWords[1] + " " + mostUsedWords[2]);
+                System.out.println("Because of words: \""+ mostUsedWords[0] + " "
+                + mostUsedWords[1] + " " + mostUsedWords[2]+"\" are excessing %30 of time\n");
                 return;
             }
         }
-        System.out.println("Text is not span for percent30");
+        System.out.println("Text is not span for 3 words excessing 30%\n");
 
     }
 
@@ -107,15 +108,15 @@ public class TextAnalizer {
             for(String s: consecutives){
                 if(text[i].equals(s)){
                     for (String t: consecutives) {
-                        if(text[i+1].equals(t)){
+                        if(count>i+2 && text[i+1].equals(t)){
                             System.out.println("This text is span");
-                            System.out.println("Because the words "+s+" and "+t+" are consecutives");
+                            System.out.println("Because the words "+s+" and "+t+" are consecutives\n");
                             return;
                         }
                     }
                 }
             }
         }
-        System.out.println("Text is not span for consecutiveVords");
+        System.out.println("Text is not span for Consecutive Vords\n");
     }
 }
