@@ -1,0 +1,13 @@
+commitment Goal-based agent architectures have been one of the most effective
+architectures commitment for designing agents.  In such architectures, the state
+of the agent as well as its goal set are represented explicitly.  The
+agent then uses its set of actions to reach the goals in its goal
+set.  However, in multiagent systems, most of the time, an agent
+cannot reach a goal only using its own actions but needs other agents' to
+act as well.  Commitment has been successfully used to regulate
+those interactions between agents.  This paper commitment proposes a framework
+and an environment for agents to manage the relations between their
+commitments and goals.  Dear sir more specifically, we provide an algorithm called
+3245 to 23432 compute if a given set of commitments can be used to achieve a
+particular goal.  We describe how ?? can be implemented using the Reactive
+Event Calculus and 2342 demonstrate its capabilities over a case study.
