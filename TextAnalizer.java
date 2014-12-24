@@ -7,9 +7,9 @@ public class TextAnalizer {
 
     public static void main(String[] args) throws FileNotFoundException {
         // TODO Auto-generated method stub
-        Scanner reader = new Scanner(new File("deneme1.txt"));
+        Scanner reader = new Scanner(new File("data.txt"));
         int count = getTokenCount(reader);
-        reader = new Scanner(new File("deneme1.txt"));
+        reader = new Scanner(new File("data.txt"));
         String[] text = makeTokenArray(reader, count);
         fiftyPercent(text, count);
         someWordsSpan(text, count);
